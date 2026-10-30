@@ -1,0 +1,23 @@
+{
+  "latex-workshop.latex.outDir": "%DIR%",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "LaTeX : PDF à la racine, fichiers annexes dans compilation",
+      "tools": ["latexmk-projet"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk-projet",
+      "command": "latexmk",
+      "args": ["-cd", "-pdf", "%DOC%"]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoClean.run": "never",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "files.exclude": {
+    "**/.DS_Store": true
+  }
+}

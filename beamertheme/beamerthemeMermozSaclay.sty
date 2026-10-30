@@ -1,0 +1,160 @@
+
+\mode<presentation>
+
+% ----------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% ----------------------------------------------------
+% A. DÉFINITION DES COULEURS
+% ----------------------------------------------------
+
+\definecolor{DauphineBleu}{HTML}{00768C}         % Bleu institutionnel
+\definecolor{DauphinePrimaire}{HTML}{00768C}     % Couleur principale
+\definecolor{DauphineGrisFonce}{HTML}{434148}    % Gris foncé
+\definecolor{DauphineFondBarre}{HTML}{00768C}    % Gris clair (barre / blocs)
+
+% Couleurs de la barre de progression
+\setbeamercolor{DauphineProgressBarBg}{bg=gray!20}
+\setbeamercolor{DauphineProgressBarFg}{bg=DauphineBleu}
+
+% ----------------------------------------------------
+% B. COULEURS DES ÉLÉMENTS
+% ----------------------------------------------------
+
+% Titres et contenu
+\setbeamercolor{frametitle}{fg=DauphineBleu}
+\setbeamercolor{title page header}{fg=DauphineBleu}
+\setbeamercolor{section in head/foot}{fg=white, bg=DauphinePrimaire}
+\setbeamercolor{item}{fg=DauphinePrimaire}
+
+% Blocs
+\setbeamercolor{block body}{bg=DauphineFondBarre!50}
+\setbeamercolor{block title}{fg=white, bg=DauphinePrimaire}
+
+% Pied de page (couleurs globales)
+\setbeamercolor{footline}{fg=black, bg=white}
+
+% ----------------------------------------------------
+% C. MISE EN PAGE EXTÉRIEURE (HEADER / FOOTER / LOGO)
+% ----------------------------------------------------
+%\useoutertheme{default}
+
+\useinnertheme{default}
+% \useoutertheme{miniframes} % Optionnel
+
+% Pied de page : logos du projet, progression et numéro de diapositive.
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{%
+  \leavevmode
+  {\color{DauphineBleu}\hrule height 0.6pt}%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=5mm,dp=2.5mm,leftskip=7mm,rightskip=7mm]{footline}
+    \includegraphics[height=3mm]{logo_ens_ups(1).png}\hspace{3mm}%
+    \includegraphics[height=3mm]{logo_mermoz(1).png}%
+    \hfill
+    \begin{minipage}{30mm}
+      \begin{beamercolorbox}[wd=\linewidth,ht=0.6mm]{DauphineProgressBarBg}
+        \begin{beamercolorbox}[wd=\dimexpr\insertframenumber\linewidth/\inserttotalframenumber\relax,ht=0.6mm]{DauphineProgressBarFg}
+        \end{beamercolorbox}
+      \end{beamercolorbox}
+    \end{minipage}%
+    \hspace{4mm}{\color{DauphineGrisFonce}\insertframenumber/\inserttotalframenumber}
+  \end{beamercolorbox}
+}
+
+% ----------------------------------------------------
+% D. PAGE DE TITRE STANDARD (style Warsaw)
+% ----------------------------------------------------
+\setbeamertemplate{title page}{
+  \vbox{}
+  \vfill
+  \begin{center}
+    %\includegraphics[height=0.6cm]{logo_dauphine.png}\par
+    \vskip1em
+    {\usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle\par}
+    \vskip0.5em
+    {\usebeamercolor[fg]{subtitle}\usebeamerfont{subtitle}\insertsubtitle\par}
+    \vskip1em
+    {\usebeamercolor[fg]{author}\usebeamerfont{author}\insertauthor\par}
+    \vskip0.5em
+    {\usebeamercolor[fg]{institute}\usebeamerfont{institute}\insertinstitute\par}
+    \vskip0.5em
+    {\usebeamercolor[fg]{date}\usebeamerfont{date}\insertdate\par}
+  \end{center}
+  \vfill
+}
+
+
+\setbeamercolor{subtitle}{fg=DauphineBleu}
+
+\setbeamercolor{title}{fg=DauphineBleu}
+\setbeamercolor{author}{fg=black}
+\setbeamercolor{institute}{fg=black}
+\setbeamercolor{date}{fg=black}
+
+\setbeamerfont{title}{size=\LARGE, series=\bfseries}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{institute}{size=\normalsize}
+\setbeamerfont{date}{size=\normalsize}
+\setbeamercolor{headline rule}{bg=DauphineBleu}
+
+
+\setbeamercolor{section name}{fg=DauphineBleu}
+\setbeamerfont{section name}{size=\LARGE, series=\bfseries}
+
+\setbeamercolor{subsection name}{fg=DauphineGrisFonce}
+\setbeamerfont{subsection name}{size=\Large, series=\bfseries}
+
+% ----------------------------------------------------
+% E. LIGNES SUPÉRIEURE ET INFÉRIEURE
+% ----------------------------------------------------
+
+% Ligne supérieure et marges des diapositives de contenu.
+\setbeamertemplate{headline}{%
+  {\color{DauphineBleu}\hrule height 0.6pt}%
+  \vskip2mm
+}
+\setbeamersize{text margin left=8mm,text margin right=8mm}
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+\setbeamercolor{normal text}{fg=DauphineGrisFonce,bg=white}
+\setbeamercolor{description item}{fg=DauphineBleu}
+\setbeamercolor{enumerate item}{fg=DauphineBleu}
+
+% ----------------------------------------------------
+% F. MODIFICATION DES PAGES DE SECTION/SUBSECTION
+% ----------------------------------------------------
+
+% Supprimer le mot "Section" sur la page d'introduction de section
+\setbeamertemplate{section page}{
+    \centering
+    \begin{beamercolorbox}[sep=12pt,center]{section name}
+        \usebeamerfont{section name}
+        \insertsection
+    \end{beamercolorbox}
+}
+
+% Supprimer le mot "Subsection" sur la page d'introduction de sous-section
+\setbeamertemplate{subsection page}{
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center]{subsection name}
+        \usebeamerfont{subsection name}
+        \insertsubsection
+    \end{beamercolorbox}
+}
+
+% ----------------------------------------------------
+% COULEUR DES ÉLÉMENTS DU SOMMAIRE (TOC)
+% ----------------------------------------------------
+% Définir la couleur de la section dans la table des matières (quand elle est inactive)
+\setbeamercolor{section in toc}{fg=DauphineBleu}
+
+% Définir la couleur de la section dans la table des matières (quand elle est active)
+\setbeamercolor{section in toc shaded}{fg=DauphineBleu}
+
+% Si vous voulez que toutes les sections, qu'elles soient actives ou non, soient du même bleu :
+% \setbeamercolor{section in toc}{fg=DauphineBleu}
+% \setbeamercolor{section in toc shaded}{fg=DauphineBleu}
+\mode<all>

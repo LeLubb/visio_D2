@@ -1,0 +1,166 @@
+% !TeX program = pdflatex
+% Compilation depuis la racine : latexmk slides_presentation.tex
+\documentclass[11pt,aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{graphicx}
+% Conserver les polices incorporées à la page de garde PDF, sans substitution.
+\pdfinclusioncopyfonts=1
+\graphicspath{{images/}}
+
+% Le thème est isolé pour pouvoir être personnalisé indépendamment du contenu.
+\usepackage{beamertheme/beamerthemeMermozSaclay}
+
+\title[Présentation ENS \& FAQ prépa]{Présentation ENS\\\& FAQ prépa}
+\subtitle{Visioconférence}
+\author{} % Ajouter le nom de l'intervenant ici.
+\institute{Lycée Jean Mermoz \quad\textbullet\quad ENS Paris-Saclay}
+\date{6 novembre 2026 à 18\,h}
+\titlegraphic{%
+  \includegraphics[height=15mm]{logo_mermoz(1).png}%
+  \hspace{12mm}%
+  \includegraphics[width=51mm]{logo_ens_ups(1).png}%
+}
+
+\begin{document}
+
+% Le PDF de référence conserve exactement la page de garde existante.
+% Les métadonnées ci-dessus restent disponibles pour une future réédition.
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{page_de_garde.pdf}}
+\begin{frame}[plain]
+  \null
+\end{frame}
+}
+
+\begin{frame}{Sommaire}
+  \begin{enumerate}
+    \setlength{\itemsep}{5mm}
+    \item Présentation des anciens
+    \item L'ENS : associations et sports
+    \item Les doubles diplômes de l'ENS
+    \item Les grandes questions sur la prépa
+    \item FAQ : à vous la parole !
+  \end{enumerate}
+\end{frame}
+
+\section{Présentation des anciens}
+\begin{frame}{Présentation des anciens}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.50\textwidth}
+      \textbf{Anciens de Mermoz}\par\medskip
+      {\color{DauphineBleu}\bfseries Promo 2025}\par
+      Lucien Hitier, Malone Meaudre\par\medskip
+      {\color{DauphineBleu}\bfseries Promo 2024}\par
+      Gabriel Repetto\par\medskip
+      {\color{DauphineBleu}\bfseries Promo 2023}\par
+      Mathis Tabouret, Keyhan Gelas,\par
+      Lubin Beneteau, Claire Bel,\par
+      Sarah Ezziani, Léonie Chauvet
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \textbf{Tour de table}\par\medskip
+      \begin{itemize}
+        \setlength{\itemsep}{3mm}
+        \item Promo Mermoz et entrée à l'ENS
+        \item L3 : majeure et mineure ; puis quel M1 ?
+        \item La suite : M2 recherche, année spécifique, double diplôme, césure\ldots
+        \item Aujourd'hui, et les métiers envisagés
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\section{L'ENS : associations et sports}
+% Sources institutionnelles détaillées dans SOURCES.md (diapositive 4).
+\begin{frame}{L'ENS : associations et sports}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      {\large\color{DauphineBleu}\bfseries La vie associative}\par\medskip
+      \begin{itemize}
+        \setlength{\itemsep}{4mm}
+        \item \textbf{BDE et Kfet} : un lieu pour se retrouver et des soirées étudiantes.
+        \item \textbf{Arts et culture} : BDA, musique, théâtre, cinéma\ldots
+        \item \textbf{S'engager} : solidarité avec la SoNo, écologie avec Terre à Terre.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      {\large\color{DauphineBleu}\bfseries Le sport sur le campus}\par\medskip
+      \begin{itemize}
+        \setlength{\itemsep}{4mm}
+        \item \textbf{Pratiquer} : foot, hand, volley, rugby, course, escalade\ldots
+        \item \textbf{S'entraîner} : cours et compétitions avec l'AS ; équipements du Moulon.
+        \item \textbf{Se retrouver} : InterENS, ENSympiades et tournois avec le BDS.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vfill
+  {\color{DauphineBleu}Et nous, quels sports et quelles assos avons-nous choisis ?}
+\end{frame}
+
+\section{Les doubles diplômes de l'ENS}
+% Exemples confirmés par la page officielle du parcours Interface, voir SOURCES.md.
+\begin{frame}{Les doubles diplômes de l'ENS}
+  Compléter sa formation dans un établissement partenaire,\par
+  dans le cadre du \textbf{parcours Interface}.
+  \vspace{6mm}
+  \begin{description}[Ingénierie et statistiques]
+    \setlength{\itemsep}{4mm}
+    \item[Ingénierie et statistiques] ENSAE Paris, École des Ponts, Mines Paris
+    \item[Affaires publiques] Sciences Po
+    \item[Management] HEC Paris
+  \end{description}
+  \vspace{6mm}
+  \textbf{Des voies sélectives, avec un nombre de places limité.}\par
+  \medskip
+  \small
+  Prérequis, durée et validation du cursus dépendent de la convention\par
+  et du projet : se renseigner auprès du département et prévoir un plan B.
+\end{frame}
+
+\section{Les grandes questions sur la prépa}
+\begin{frame}{Les grandes questions sur la prépa}
+  \begin{enumerate}
+    \setlength{\itemsep}{4mm}
+    \item \textbf{Comment se préparer au concours ?}\par
+          Révisions, annales et entraînement en temps limité.
+    \item \textbf{Quelle méthode de travail au quotidien ?}\par
+          Organisation, reprise des erreurs et entraide.
+    \item \textbf{Comment éviter de perdre ses moyens devant un sujet ?}\par
+          Premières minutes, blocages et gestion du temps.
+    \item \textbf{Comment tirer parti des khôlles ?}\par
+          Préparation, raisonnement à voix haute et retours du professeur.
+  \end{enumerate}
+\end{frame}
+
+\section{FAQ}
+\begin{frame}{FAQ}
+  {\Large\color{DauphineBleu}\bfseries À vous la parole !}\par
+  \medskip
+  Vos questions à l'oral ou dans le chat.
+  \vspace{6mm}
+  \begin{itemize}
+    \setlength{\itemsep}{4mm}
+    \item Comment choisir sa majeure, sa mineure et son master ?
+    \item Et si je préfère d'autres approches que l'économie quantitative ?
+    \item Recherche à l'étranger, Erasmus, stages, césure : quels parcours ?
+    \item Quels débouchés après l'ENS ? Et la vie sur le plateau ?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Merci !}
+  \centering
+  {\LARGE\color{DauphineBleu}\bfseries Merci pour votre participation}\par
+  \vspace{8mm}
+  {\large Bonne continuation en prépa}\par
+  \medskip
+  {\large et bon courage pour les concours !}\par
+  \vspace{10mm}
+  Les anciens de Mermoz
+\end{frame}
+
+\end{document}
